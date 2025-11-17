@@ -1,0 +1,121 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5; /* Light gray background like Figma */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; /* Dark gray text */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff; /* Pure white */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 24px;
+    width: 100%;
+    max-width: 400px; /* Approximate width based on description */
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    position: relative;
+}
+
+.all-pages {
+    font-weight: 500; /* Medium weight */
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.checkbox {
+    display: none; /* Hide the actual checkbox */
+}
+
+.checkbox-label {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db; /* Light gray border */
+    border-radius: 4px; /* Rounded square */
+    background-color: #ffffff; /* White background */
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox:checked + .checkbox-label {
+    background-color: #3b82f6; /* Blue background when checked */
+    border-color: #3b82f6;
+}
+
+.checkbox:checked + .checkbox-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 6px;
+    height: 10px;
+    border: solid #ffffff; /* White checkmark */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.divider {
+    height: 1px;
+    background-color: #e5e7eb; /* Light gray divider */
+    margin: 0 -24px; /* Full width */
+}
+
+.done-button {
+    background-color: #f7c948; /* Soft yellow */
+    color: #333; /* Dark gray text */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 24px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight elevation */
+    transition: background-color 0.2s ease;
+}
+
+.done-button:hover {
+    background-color: #f5b847; /* Slightly darker yellow on hover */
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .card {
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    .divider {
+        margin: 0 -16px;
+    }
+}
